@@ -1,8 +1,10 @@
+#include <stdarg.h>
+
 void handle_int(va_list args) {
     int n = va_arg(args, int);
     if (n < 0)
     {
-        putchar('-');
+        _putchar('-');
         n = -n;
     }
     int digits[10];  
@@ -16,13 +18,13 @@ void handle_int(va_list args) {
     }
     if (index == 0)
     {
-        putchar('0');
+        _putchar('0');
     } 
     else 
     {
         for (index = index - 1; index >= 0; index--)
         {
-            putchar(digits[index] + '0');
+            _putchar(digits[index] + '0');
         }
     }
 }
