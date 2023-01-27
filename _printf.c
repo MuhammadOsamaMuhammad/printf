@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdarg.h>
+
 int _printf(const char *format, ...)
 {
     va_list args;
@@ -24,12 +26,12 @@ int _printf(const char *format, ...)
             }
             else
             {   counter++;
-                putchar('%');
+                _putchar('%');
             }
         } 
         else 
         {   counter++;
-            putchar(format[i]);
+            _putchar(format[i]);
         }
     }
     va_end(args);
